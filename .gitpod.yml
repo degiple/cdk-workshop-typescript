@@ -3,9 +3,12 @@
 # Please adjust to your needs (see https://www.gitpod.io/docs/config-gitpod-file)
 # and commit this file to your remote git repository to share the goodness with others.
 
+image:
+  file: .gitpod.Dockerfile
+
 tasks:
-  - command: curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && sudo ./aws/install && rm awscliv2.zip && npm install -g typescript && npm install -g aws-cdk && npm install
-# command: npm run watch
+  - init: npm install
+    # command: npm run watch
 vscode:
   extensions:
     - dbaeumer.vscode-eslint
